@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --color-cinza-escuro: #222225;
+}

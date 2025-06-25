@@ -1,6 +1,8 @@
 import './App.css'
-import './Styles/Variables.css'
+import Menu from './Components/Menu'
 import Home from './Pages/Home'
+import './Styles/Variables.css'
+
 
 function App() {
 

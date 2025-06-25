@@ -5,8 +5,7 @@ function Home() {
 
   return (
     <>
-        <Menu />
-        <main className='ml-[25vw] mr-[15vw] flex flex-col gap-7'>
+        <main className='ml-[25vw] mr-[15vw] flex flex-col gap-7 hiddden md:block'>
                 <h1 className='text-[45px] mt-[5vh]'>Visão geral</h1>
                 <div className='flex items-center gap-50'>
                     <div className='py-4 px-8 bg-bege rounded-3xl'>

@@ -1,6 +1,6 @@
 import './App.css'
 import './Styles/Variables.css'
-import Menu from './Components/Menu'
+import Home from './Pages/Home'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
         <Menu />
-        
+        <Home />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+  import { useState } from 'react'
   import Logo from '../Assets/logo-stockit.png'
   import IconsGlobo from '../Assets/Icons/icon-globo.png'
   import IconsCaixa from '../Assets/Icons/icon-caixa.png'
@@ -20,31 +20,42 @@ import { useState } from 'react'
       <>
           <nav className="justify-between items-center bg-cinza-escuro p-4 hidden md:block">
             <img src={IconsPerfil} alt="" className="w-8 h-8" />
+            <p>teste</p>
           </nav>
           <aside className="fixed top-0 left-0 h-full w-64 bg-cinza-escuro text-white z-50 shadow-lg overflow-y-auto cursor-pointer hidden md:block">
-            <div className="flex justify-between items-center px-4 py-6 ">
+            <div className="flex justify-center items-center px-4 mt-8 mb-16 ">
               <img src={Logo} alt="" className="w-32" />
             </div>
-            <ul className="flex flex-col gap-4 p-6">
-              <li className="flex items-center gap-3">
-                <img src={IconsGlobo} alt="" className="w-5" />
-                <a href="">Visão geral</a>
+            <ul className="flex items-center flex-col gap-4">
+              <li>
+                <a href="x" className='flex items-center gap-3'>
+                  <img src={IconsGlobo} alt="" className="w-5" />
+                  <p>Visão geral</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <img src={IconsCaixa} alt="" className="w-5" />
-                <a href="">Produtos</a>
+              <li>
+                <a href="z" className='flex items-center gap-3'>
+                  <img src={IconsCaixa} alt="" className="w-5" />
+                  <p>Produtos</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li>
+                <a href="" className='flex items-center gap-3'>
                 <img src={IconsEngrenagem} alt="" className="w-5" />
-                <a href="">Gerenciar produtos</a>
+                <p>Gerenciar produtos</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li>
+                <a href="" className='flex items-center gap-3'>
                 <img src={IconsDocument} alt="" className="w-5" />
-                <a href="">Relatório</a>
+                <p>Relatório</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <img src={IconsRelogio} alt="" className="w-5" />
-                <a href="">Histórico</a>
+              <li>
+                <a href="" className='flex items-center gap-3'>
+                  <img src={IconsRelogio} alt="" className="w-5" />
+                  <p>Histórico</p>
+                </a>
               </li>
             </ul>
           </aside>
@@ -65,27 +76,36 @@ import { useState } from 'react'
                 <img src={IconsX} alt="" className="w-6 h-6" />
               </button>
             </div>
-
-            <ul className="flex flex-col gap-4 p-6">
-              <li className="flex items-center gap-3">
-                <img src={IconsGlobo} alt="" className="w-5" />
-                <a href="">Visão geral</a>
+            <ul className="flex flex-col gap-4 p-6 ">
+              <li>
+                <a href="x" className='flex items-center gap-3'>
+                  <img src={IconsGlobo} alt="" className="w-5" />
+                  <p>Visão geral</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <img src={IconsCaixa} alt="" className="w-5" />
-                <a href="">Produtos</a>
+              <li>
+                <a href="z" className='flex items-center gap-3'>
+                  <img src={IconsCaixa} alt="" className="w-5" />
+                  <p>Produtos</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li>
+                <a href="" className='flex items-center gap-3'>
                 <img src={IconsEngrenagem} alt="" className="w-5" />
-                <a href="">Gerenciar produtos</a>
+                <p>Gerenciar produtos</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li>
+                <a href="" className='flex items-center gap-3'>
                 <img src={IconsDocument} alt="" className="w-5" />
-                <a href="">Relatório</a>
+                <p>Relatório</p>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <img src={IconsRelogio} alt="" className="w-5" />
-                <a href="">Histórico</a>
+              <li>
+                <a href="" className='flex items-center gap-3'>
+                  <img src={IconsRelogio} alt="" className="w-5" />
+                  <p>Histórico</p>
+                </a>
               </li>
             </ul>
           </aside>

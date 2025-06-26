@@ -1,17 +1,130 @@
-# Estrutura inicial do projeto Stockit.
+<div>
+<img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" />
+</div>
 
-[ libraries instaladas: react hook form, react router dom e tailwindcss]
+# Stockit - Projeto Integrador.
+
+- [ libraries instaladas: react-hook-form, react-router-dom e Tailwindcss]
+
+---
+
+## 🧠 Git – Guia rápido
+
+## 1. Clonar o repositório
+
+```bash
+git clone https://github.com/pabloknapp/Stockit
+
+cd Stockit
+```
 
 
-# React + Vite
+## 2. Criar e Alternar Branch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Criar uma nova branch e alternar para ela:
 
-Currently, two official plugins are available:
+```bash
+git checkout -b nome-da-branch
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mudar para uma branch já existente:
 
-## Expanding the ESLint configuration
+```bash
+git checkout nome-da-branch
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 3. Adicionar Arquivos
+
+Adicionar um arquivo específico:
+
+```bash
+git add arquivo.txt
+```
+
+Adicionar todos os arquivos modificados:
+
+```bash
+git add .
+```
+
+## 4. Verificar o Status
+
+```bash
+git status
+```
+
+## 5. Commitar Alterações
+
+```bash
+git commit -m "Breve descrição do que foi feito"
+```
+
+## 6. Enviar Alterações
+
+Enviar sua branch com as alterações para o repositório remoto:
+
+```bash
+git push origin nome-da-branch
+```
+
+## 7. Atualizar com a Branch Principal
+
+Atualizar sua branch com a branch `main` (ou `master`):
+
+```bash
+git checkout main
+git pull origin main
+git checkout nome-da-branch
+git merge main
+```
+
+## 8. Resolver Conflitos
+
+1. Edite os arquivos marcados com conflitos (`<<<<<<<`, `=======`, `>>>>>>>`).
+2. Após resolver:
+
+```bash
+git add arquivo-com-conflito
+git commit -m "Resolve conflito"
+```
+
+## 9. Mesclar sua Branch na `main`
+
+Via terminal:
+
+```bash
+git checkout main
+git pull origin main
+git merge nome-da-branch
+git push origin main
+```
+
+Ou crie um **Pull Request (PR)** na interface do GitHub/GitLab para revisão.
+
+## 10. Descartar Alterações (CUIDADO ⚠)
+
+Desfazer mudanças em um arquivo específico:
+
+```bash
+git checkout -- arquivo.txt
+```
+
+Resetar tudo para o último commit (perde as alterações locais!):
+
+```bash
+git reset --hard
+```
+
+---
+
+### ✅ Dicas Finais
+
+- Sempre escreva mensagens de commit descritivas e objetivas.
+- Evite fazer commits diretamente na `main`.
+- Atualize sua branch com frequência para evitar conflitos grandes.
+
+---
+
+🛠️ *Mantenha essa colinha por perto enquanto trabalha com Git. Ela pode salvar seu dia!*

@@ -60,7 +60,7 @@
             </ul>
           </aside>
         <header>
-          <nav className="flex justify-between items-center bg-cinza-escuro p-4 block md:hidden">
+          <nav className="flex justify-between items-center bg-cinza-escuro p-4  md:hidden">
             <button onClick={abrirMenu}>
               <img src={IconsBurguer} alt="" className="w-6 h-6" />
             </button>

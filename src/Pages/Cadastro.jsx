@@ -6,7 +6,7 @@ function Cadastro() {
 return( 
 
     <>
-<div>
+<div className='flex justify-center ml-40 w-400'>
     <div className="flex items-center justify-center">
                 <div
                 className="bg-cinza-escuro ">

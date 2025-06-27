@@ -1,13 +1,14 @@
 import './App.css'
 import Menu from './Components/Menu'
-<<<<<<< tela-gerenciar-produtos
 import GerenciarProdutos from './Pages/GerenciarProdutos'
-=======
 import Cadastro from './Pages/Cadastro'
->>>>>>> main
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import './Styles/Variables.css'
+import AdicionarProdutos from './Pages/AdicionarProdutos'
+import RemoverProduto from './Pages/RemoverProdutos'
+import Historico from './Pages/Historicos'
+import GerarRelatorio from './Pages/GerarRelatorios'
 
 
 function App() {
@@ -15,16 +16,17 @@ function App() {
 
   return (
     <>
-<<<<<<< tela-gerenciar-produtos
         { <Menu />}
-        {/* {<Home />} */ }
-         {<GerenciarProdutos/>} 
-=======
-        {/* <Menu /> */}
         {/* <Home /> */}
-        <Login />
+        {/* {<GerenciarProdutos/>}  */}
+        {/* <Login /> */}
+        {/* {<AdicionarProdutos/>} */}
+        {/* {<Cadastro/>} */}
+        {/* {<RemoverProduto/>} */}
+        {/* {<Historico/>} */}
+        {/* {<GerarRelatorio/>} */}
 
->>>>>>> main
+
     </>
   )
 }

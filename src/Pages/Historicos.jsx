@@ -1,34 +1,38 @@
 import React from "react";
+import Menu from "../Components/Menu";
 
    function Historico() {
 
-        const eventos = [
-    {
-      titulo: "Novo Produto adicionado",
-      descricao: "User Criou o produto Carregador Inova às 12:34 12/03",
-    },
-    {
-      titulo: "Produto removido",
-      descricao: "User Removeu o produto Carregador Inova às 13:00 12/03",
-    },
-    {
-      titulo: "Produto editado",
-      descricao:
-        "User editou categoria, nome, valor, marca do produto Carregador Inova às 13:54 12/03",
-    },
-    {
-      titulo: "Estoque adicionado",
-      descricao: "User adicionou 159 de estoque de Carregador Inova às 14:11 12/03",
-    },
-    {
-      titulo: "Estoque removido",
-      descricao: "User removeu 19 de estoque de Carregador Inova às 14:49 12/03",
-    },
-  ]
-
-  return (
+     
+     const eventos = [
+       {
+         titulo: "Novo Produto adicionado",
+         descricao: "User Criou o produto Carregador Inova às 12:34 12/03",
+        },
+        {
+          titulo: "Produto removido",
+          descricao: "User Removeu o produto Carregador Inova às 13:00 12/03",
+        },
+        {
+          titulo: "Produto editado",
+          descricao:
+          "User editou categoria, nome, valor, marca do produto Carregador Inova às 13:54 12/03",
+        },
+        {
+          titulo: "Estoque adicionado",
+          descricao: "User adicionou 159 de estoque de Carregador Inova às 14:11 12/03",
+        },
+        {
+          titulo: "Estoque removido",
+          descricao: "User removeu 19 de estoque de Carregador Inova às 14:49 12/03",
+        },
+      ]
+      
+      return (
+        <>
+    <Menu/>
     <div className="min-h-screen flex flex-col sm:flex-row bg-gray-100">
- 
+
       <main className="flex-1 px-4 py-6 flex flex-col items-center">
 
         <div className="sm:hidden absolute top-4 right-4 text-gray-700">
@@ -50,6 +54,7 @@ import React from "react";
         </div>
       </main>
     </div>
+    </>
   )
 }
 

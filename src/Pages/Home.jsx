@@ -1,6 +1,7 @@
 import Menu from '../Components/Menu'
 import '../Styles/Variables.css'
 
+
 function Home() {
 
   return (  

@@ -1,11 +1,13 @@
 import '../Styles/Variables.css'
 import Logo from '../Assets/logo-stockit.png'
+import Menu from '../Components/Menu'
 
 function Login() {
 
 return( 
 
     <>
+    <Menu/>
 <div className='md:max-h-[100vh] '>
     <div className="flex items-center justify-center md:m-[15vh]">
                 <div

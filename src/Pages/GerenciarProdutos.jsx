@@ -12,12 +12,11 @@ import IconsCaneta from '../Assets/Icons/icon-caneta.png'
 function GerenciarProdutos() {
 return (
     <>
-    <menu/>
-
+    <Menu/>
     <div className="flex h-screen">
         <main className="bg-cinza min-h-screen w-full md:ml-[16rem]  p-6 md:p-12">
-            <h1 className="text-3xl p-5 text-center md:text-left font-bold block ">Gerenciar Produtos</h1>
 
+            <h1 className="text-3xl p-5 text-center md:text-left font-bold block ">Gerenciar Produtos</h1>
             <ul className="flex flex-col gap-8">
                 <li className="flex items-center justify-between md:justify-between">
                 <div className="flex items-center gap-3">

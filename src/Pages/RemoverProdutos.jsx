@@ -1,7 +1,10 @@
 import React from "react"
+import Menu from "../Components/Menu"
 
 function RemoverProduto() {
   return (
+    <>
+    <Menu/>
     <div className="min-h-screen flex flex-col sm:flex-row bg-gray-100">
     
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-6">
@@ -37,6 +40,7 @@ function RemoverProduto() {
         </div>
       </main>
     </div>
+    </>
   )
 }
 

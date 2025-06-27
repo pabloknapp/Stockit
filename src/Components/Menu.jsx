@@ -9,6 +9,8 @@
   import IconsBurguer from '../Assets/Icons/icon-burguer.png'
   import IconsPerfil from '../Assets/Icons/icon-perfil.png'
   import '../Styles/Variables.css'
+  import { Link } from 'react-router-dom'
+
 
   function Menu() {
     const [menuAberto, setMenuAberto] = useState(false)
@@ -18,6 +20,11 @@
 
     return (
       <>
+      {/* <div className='nav-links'>
+                        <Link to="/" className='links'>🎭SHOWS🎟️</Link>&nbsp;&nbsp;
+                        <Link to="/inclusao" className='links'>CADASTRO✍️</Link>&nbsp;&nbsp;
+                        <Link to="/pesquisa" className='links'>PESQUISAR🔍</Link>&nbsp;&nbsp;
+                    </div>        */}
           <nav className="justify-between items-center bg-cinza-escuro p-4 hidden md:block">
             <img src={IconsPerfil} alt="" className="w-8 h-8" />
             <p>teste</p>
@@ -28,34 +35,35 @@
             </div>
             <ul className="flex items-center flex-col gap-4">
               <li>
-                <a href="x" className='flex items-center gap-3'>
+                <div className='flex items-center gap-3'>
                   <img src={IconsGlobo} alt="" className="w-5" />
-                  <p>Visão geral</p>
-                </a>
+                  <Link to="../home">Visão Geral</Link>
+                </div>
+
               </li>
               <li>
-                <a href="z" className='flex items-center gap-3'>
+                  <div className='flex items-center gap-3'>
                   <img src={IconsCaixa} alt="" className="w-5" />
-                  <p>Produtos</p>
-                </a>
+                  <Link to="../produtos">Produtos</Link>
+                </div>
               </li>
               <li>
-                <a href="" className='flex items-center gap-3'>
-                <img src={IconsEngrenagem} alt="" className="w-5" />
-                <p>Gerenciar produtos</p>
-                </a>
+                <div className='flex items-center gap-3'>
+                  <img src={IconsEngrenagem} alt="" className="w-5" />
+                  <Link to="../gerenciar-produtos">Gerenciar produtos</Link>
+                </div>
               </li>
               <li>
-                <a href="" className='flex items-center gap-3'>
-                <img src={IconsDocument} alt="" className="w-5" />
-                <p>Relatório</p>
-                </a>
+                <div className='flex items-center gap-3'>
+                  <img src={IconsDocument} alt="" className="w-5" />
+                  <Link to="../gerar-relatorio">Relatório</Link>
+                </div>
               </li>
               <li>
-                <a href="" className='flex items-center gap-3'>
+              <div className='flex items-center gap-3'>
                   <img src={IconsRelogio} alt="" className="w-5" />
-                  <p>Histórico</p>
-                </a>
+                  <Link to="../historico">Histórico</Link>
+                </div>
               </li>
             </ul>
           </aside>

@@ -17,10 +17,10 @@ function App() {
   return (
     <>
         { <Menu />}
-        {/* <Home /> */}
-        {/* {<GerenciarProdutos/>}  */}
+        { <Home /> }
+        {/* {<GerenciarProdutos/>} */}
         {/* <Login /> */}
-        {/* {<AdicionarProdutos/>} */}
+        {/* {<AdicionarProdutos/>}  */}
         {/* {<Cadastro/>} */}
         {/* {<RemoverProduto/>} */}
         {/* {<Historico/>} */}

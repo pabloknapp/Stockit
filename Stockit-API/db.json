@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "userId": "1",
+      "nome": "admin",
+      "email": "admin@gmail.com",
+      "senha": "admin123"
+    },
+    {
+      "id": "5498",
+      "nome": "teste",
+      "email": "teste@gmail.com",
+      "senha": "123",
+      "userId": "1751197606060"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "e282",
+      "nome": "111",
+      "marca": "111",
+      "categoria": "11",
+      "estoque": "1",
+      "valor": "1",
+      "imagem": "",
+      "userId": "1"
+    },
+    {
+      "id": "3f6b",
+      "nome": "a",
+      "marca": "a",
+      "categoria": "a",
+      "estoque": "1",
+      "valor": "1",
+      "imagem": "",
+      "userId": "1"
+    }
+  ],
+  "historico": [
+    {
+      "id": "d2ab",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto test às 06:42:31 29/06/2025"
+    },
+    {
+      "id": "8003",
+      "userId": "1",
+      "titulo": "Produto editado",
+      "descricao": "admin alterou nome, categoria, estoque do produto test às 06:42:57 29/06/2025"
+    },
+    {
+      "id": "d8dd",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto aaa às 06:43:04 29/06/2025"
+    },
+    {
+      "id": "895a",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto 111 às 07:15:34 29/06/2025"
+    },
+    {
+      "id": "363f",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto a às 07:16:41 29/06/2025"
+    }
+  ]
+}

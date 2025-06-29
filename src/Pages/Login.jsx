@@ -1,66 +1,121 @@
-import '../Styles/Variables.css'
-import Logo from '../Assets/logo-stockit.png'
-import Menu from '../Components/Menu'
+import '../Styles/Variables.css';
+import Logo from '../Assets/logo-stockit.png';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
 
-return( 
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        `http://localhost:3000/users?email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`
+      );
+
+      const data = await response.json();
+
+      if (data.length > 0) {
+        const user = data[0];
+        localStorage.setItem('user', JSON.stringify(user));
+        console.log('Login realizado:', user);
+        navigate('/home');
+      } else {
+        setErro('Usuário ou senha inválidos.');
+      }
+    } catch (error) {
+      console.error(error);
+      setErro('Erro ao tentar fazer login.');
+    }
+  };
+
+  return (
     <>
-    <Menu/>
-<div className='md:max-h-[100vh] '>
-    <div className="flex items-center justify-center md:m-[15vh]">
-                <div
-                className="bg-cinza-escuro md:rounded-xl">
-        <div
-        className="mx-auto flex items-center space-y-8 py-16 px-12 font-semibold text-gray-500 flex-col justify-center h-screen md:h-auto"
+      <div
+        className="
+          min-h-screen
+          flex
+          items-center
+          justify-center
+          bg-cinza
+          p-4
+        "
+      >
+        <form
+          onSubmit={handleLogin}
+          className="
+            bg-cinza-escuro
+            w-full
+            max-w-md
+            p-8
+            rounded-lg
+            flex
+            flex-col
+            gap-5
+            text-gray-200
+            shadow-lg
+          "
         >
-        <img src={Logo} alt="StockitLogo" className="w-80 h-25 mb-20 md: w-96 md:h-32 mt">
+          <div className="flex justify-center">
+            <img
+              src={Logo}
+              alt="StockitLogo"
+              className="w-48 md:w-64 h-auto mb-6"
+            />
+          </div>
 
-        </img>
-        <h1 className="text-white md:text-4xl text-3xl mb-6">Entre na sua conta</h1>
-        <div className='gap-5 flex flex-col w-full md:w-96'>
-            <input
-                className="w-full p-3 bg-white rounded-md border border-gray-700 hover:border-blue-800 transition-all duration-200"
-                placeholder="Usuário"
-                type="text"
-                name="Usuario"
-                id=""
-                />
-            <input
-                className="w-full p-3 bg-white rounded-md border border-gray-700 focus:border-blue-700 hover:border-blue-500 transition-all duration-200"
-                placeholder="Senha"
-                type="password"
-                name="Senha"
-                id=""
-                />
-            <input
-                className="w-full p-3 mt-4 bg-azul-botao cursor-pointer rounded-lg font-bold text-white focus:border-blue-700 hover:bg-blue-500 transition-all duration-200"
-                type="submit"
-                id=""
-                />
-        </div>
-        <p className='gap-1 flex'>
-            Não possui uma conta?
+          <h1 className="text-white text-2xl md:text-3xl font-bold text-center my-8">
+            Fazer login no Stockit
+          </h1>
+
+          <input
+            className="w-full p-3 bg-white text-black rounded border border-gray-700 hover:border-blue-800 transition-all duration-200 focus:border-blue-700"
+            placeholder="Email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
+          <input
+            className="w-full p-3 bg-white text-black rounded border border-gray-700 focus:border-blue-700 hover:border-blue-500 transition-all duration-200"
+            placeholder="Senha"
+            type="password"
+            name="senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            required
+          />
+
+          <input
+            className="w-full p-3 mt-10 bg-azul-botao cursor-pointer rounded-lg font-bold text-white hover:bg-blue-500 transition-all duration-200"
+            type="submit"
+            value="Entrar"
+          />
+
+          {erro && (
+            <p className="text-red-500 text-center">{erro}</p>
+          )}
+
+          <p className="text-center text-gray-300">
+            Não possui uma conta?{" "}
             <a
-            className="font-semibold text-white hover:text-blue-500 transition-all duration-200"
-            href="./cadastro.html"
-            > Criar aqui</a>
-        </p>
-    </div>
-    </div>
-    </div>
-</div>
-
-
-
-
-
-
-</>
-
-)
+              className="font-semibold text-white hover:text-blue-400 transition-all duration-200"
+              href="/cadastro"
+            >
+              Criar aqui
+            </a>
+          </p>
+        </form>
+      </div>
+    </>
+  );
 }
 
-
-export default Login
+export default Login;

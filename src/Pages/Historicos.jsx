@@ -30,7 +30,7 @@ function Historico() {
               Nenhum evento registrado.
             </p>
           ) : (
-            <div className="bg-white w-full md:ml-[10vw] max-w-3xl rounded-lg shadow-md p-6 space-y-4">
+            <div className="bg-white w-full md:ml-[10vw] flex flex-col-reverse gap-4 max-w-3xl rounded-lg shadow-md p-6">
               {eventos.map((evento) => (
                 <div
                   key={evento.id}

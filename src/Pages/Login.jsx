@@ -38,12 +38,11 @@ function Login() {
     <>
       <div
         className="
-          min-h-screen
-          flex
-          items-center
+          min-h-screen flex
+          md:items-center
           justify-center
           bg-cinza
-          p-4
+          md:p-4
         "
       >
         <form
@@ -53,7 +52,7 @@ function Login() {
             w-full
             max-w-md
             p-8
-            rounded-lg
+            md:rounded-lg
             flex
             flex-col
             gap-5

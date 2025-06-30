@@ -61,10 +61,10 @@ function Cadastro() {
         className="
           min-h-screen
           flex
-          items-center
+          md:items-center
           justify-center
           bg-cinza
-          p-4
+          md:p-4
         "
       >
         <form
@@ -74,7 +74,7 @@ function Cadastro() {
             w-full
             max-w-md
             p-8
-            rounded-lg
+            md:rounded-lg
             flex
             flex-col
             gap-5

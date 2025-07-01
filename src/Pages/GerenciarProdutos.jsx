@@ -7,6 +7,8 @@ import IconsMais from '../Assets/Icons/icon-mais2.png';
 import IconsMenos from '../Assets/Icons/icons-menos.png';
 import IconsCaneta from '../Assets/Icons/icon-caneta.png';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 function GerenciarProdutos() {
   const [mostrarFormCriar, setMostrarFormCriar] = useState(false);
@@ -233,7 +235,7 @@ function GerenciarProdutos() {
                 <input placeholder="Nome" className="p-2 border-1 rounded" value={produtoNovo.nome} onChange={e => setProdutoNovo({...produtoNovo, nome: e.target.value})} required />
                 <input placeholder="Marca" className="p-2 border-1 rounded" value={produtoNovo.marca} onChange={e => setProdutoNovo({...produtoNovo, marca: e.target.value})} required />
                 <input placeholder="Categoria" className="p-2 border-1 rounded" value={produtoNovo.categoria} onChange={e => setProdutoNovo({...produtoNovo, categoria: e.target.value})} required />
-                <input placeholder="Estoque" type="number" className="p-2 border-1 rounded" value={produtoNovo.estoque} onChange={e => setProdutoNovo({...produtoNovo, estoque: e.target.value})} required />
+                <input placeholder="Estoque" type="number" className=" p-2 border-1 rounded" value={produtoNovo.estoque} onChange={e => setProdutoNovo({...produtoNovo, estoque: e.target.value})} required />
                 <input placeholder="Valor" type="number" className="p-2 border-1 rounded" value={produtoNovo.valor} onChange={e => setProdutoNovo({...produtoNovo, valor: e.target.value})} required />
                 <input placeholder="URL da Imagem" className="p-2 border-1 rounded" value={produtoNovo.imagem} onChange={e => setProdutoNovo({...produtoNovo, imagem: e.target.value})} />
                 <button type="submit" className="bg-verde-botao mt-[6%] p-2 rounded hover:bg-green-500 hover:cursor-pointer">Criar novo produto</button>

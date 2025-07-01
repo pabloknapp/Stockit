@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Logo from '../Assets/logo-stockit.png'
 import IconsGlobo from '../Assets/Icons/icon-globo.png'
 import IconsCaixa from '../Assets/Icons/icon-caixa.png'
@@ -10,11 +11,12 @@ import IconsBurguer from '../Assets/Icons/icon-burguer.png'
 import IconsPerfil from '../Assets/Icons/icon-perfil.png'
 import Sair from '../Assets/Icons/icons-sair.png'
 import '../Styles/Variables.css'
-import { Link, useNavigate } from 'react-router-dom'
+
 
 function Menu() {
   const [menuAberto, setMenuAberto] = useState(false)
   const navigate = useNavigate()
+  const location = useLocation()
 
   const abrirMenu = () => setMenuAberto(true)
   const fecharMenu = () => setMenuAberto(false)
@@ -51,7 +53,11 @@ function Menu() {
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="flex items-center gap-8 hover:bg-gray-700 hover:text-blue-300 rounded p-2 transition-all duration-200"
+                  className={`flex items-center gap-8 rounded p-2 transition-all duration-200
+                    ${location.pathname === item.to
+                      ? 'bg-azul-stockit text-white'
+                      : 'hover:bg-gray-700 hover:text-blue-300'}
+                  `}
                 >
                   <img src={item.icon} alt="" className="w-5" />
                   {item.label}
@@ -62,7 +68,7 @@ function Menu() {
         </div>
         <button
           onClick={handleLogout}
-          className="w-full flex items-center px-4 py-3 bg-cinza-escuro hover:bg-vermelho-botao transition-colors"
+          className="cursor-pointer w-full flex items-center px-4 py-3 bg-cinza-escuro hover:bg-vermelho-botao transition-colors"
         >
           <span className="text-white font-semibold flex gap-2 items-center">
             <img src={Sair} alt="Sair" className="w-5" />

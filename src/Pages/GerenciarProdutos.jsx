@@ -211,12 +211,12 @@ function GerenciarProdutos() {
     <>
       <Menu />
       <div className="flex h-full">
-        <main className="bg-cinza min-h-screen w-full md:ml-[16rem] p-6 md:p-12">
+        <main className="bg-cinza min-h-screen w-full md:pl-[15vw] p-6 md:p-12">
           <h1 className="text-3xl mt-2 my-24 md:text-left font-bold block">Gerenciar Produtos</h1>
           <ul className="flex flex-col gap-8">
             {/* Adicionar Produto */}
             <li className="flex items-center justify-between md:justify-between">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-12">
                 <img src={IconsCaixa3} alt="" className="w-6" />
                 <p className="text-base md:text-2xl font-bold">Adicionar Produto</p>
               </div>
@@ -242,7 +242,7 @@ function GerenciarProdutos() {
 
             {/* Excluir Produto */}
             <li className="flex items-center justify-between md:justify-between">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-12">
                 <img src={IconsCaixa2} alt="" className="w-6" />
                 <p className="text-base md:text-2xl font-bold">Remover produto</p>
               </div>
@@ -263,7 +263,7 @@ function GerenciarProdutos() {
 
             {/* Editar Produto */}
             <li className="flex items-center justify-between md:justify-between">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-12">
                 <img src={IconsPlanilha} alt="" className="w-6" />
                 <p className="text-base md:text-2xl font-bold">Editar produto</p>
               </div>

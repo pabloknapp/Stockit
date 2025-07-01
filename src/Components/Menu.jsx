@@ -41,7 +41,7 @@ function Menu() {
       </nav>
 
       {/* ASIDE DESKTOP */}
-      <aside className="hidden md:flex md:flex-col md:fixed md:top-0 md:left-0 md:h-full md:w-64 md:bg-cinza-escuro md:text-white md:z-50 md:shadow-lg md:overflow-y-auto justify-between">
+      <aside className="hidden md:flex md:flex-col md:fixed md:top-0 md:left-0 md:h-full md:w-64 md:bg-cinza-escuro md:text-white font-semibold md:z-50 md:shadow-lg md:overflow-y-auto justify-between">
         <div>
           <div className="flex justify-center items-center px-4 mt-8 mb-16">
             <img src={Logo} alt="Logo" className="w-42 my-4" />
@@ -82,7 +82,7 @@ function Menu() {
       </header>
 
       {menuAberto && (
-        <aside className=" w-[100vw] h-[80vh] bg-cinza-escuro text-white z-50 flex flex-col justify-between">
+        <aside className=" w-[100vw] h-[80vh] bg-cinza-escuro text-white font-semibold z-50 flex flex-col justify-between">
           <div>
             <div className="flex justify-between items-center px-4 py-6">
               <img src={Logo} alt="Logo" className="w-32" />

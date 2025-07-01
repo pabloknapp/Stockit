@@ -20,6 +20,7 @@
     "react-hook-form": "^7.58.1",
     "react-router-dom": "^7.6.2",
     "react-to-pdf": "^2.0.1",
+    "sweetalert2": "^11.22.2",
     "tailwindcss": "^4.1.10"
   },
   "devDependencies": {

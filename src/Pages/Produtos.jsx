@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import Menu from '../Components/Menu';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState([]);
@@ -14,6 +16,8 @@ function ListaProdutos() {
     estoqueMin: '',
     estoqueMax: '',
   });
+
+  const [filtrosVisiveis, setFiltrosVisiveis] = useState(false); // novo estado
 
   useEffect(() => {
     if (usuario?.userId) {
@@ -89,65 +93,95 @@ function ListaProdutos() {
           Meus Produtos
         </h1>
 
-        {/* Barra de Filtros */}
-        <div className="bg-cinza-escuro p-4 rounded mb-6 flex flex-col md:flex-row gap-4">
+        {/* MOBILE: Campo de busca sempre visível */}
+        <input
+          type="text"
+          name="busca"
+          placeholder="Pesquisar por Nome, Marca ou Categoria"
+          value={filtros.busca}
+          onChange={handleChangeFiltro}
+          className="p-2 rounded border-1 text-white w-full bg-cinza-escuro mb-4 md:hidden"
+        />
+
+        {/* MOBILE: Botão para abrir filtros */}
+        <button
+          className="md:hidden bg-azul-stockit text-white p-2 rounded mb-4 w-full cursor-pointer"
+          onClick={() => setFiltrosVisiveis((v) => !v)}
+        >
+          {filtrosVisiveis ? 'Fechar Filtros' : 'Filtros'}
+        </button>
+
+        {/* DESKTOP: Barra de busca + botão filtros lado a lado */}
+        <div className="hidden md:flex items-center gap-3 mb-4 cursor-p bg-white rounded py-6 px-4">
           <input
             type="text"
             name="busca"
             placeholder="Pesquisar por Nome, Marca ou Categoria"
             value={filtros.busca}
             onChange={handleChangeFiltro}
-            className="p-2 mr-auto rounded border-1 text-white w-full md:w-1/3"
-          />
-          <input
-            type="text"
-            name="id"
-            placeholder="ID"
-            value={filtros.id}
-            onChange={handleChangeFiltro}
-            className="p-2 rounded text-white w-full md:w-16"
-          />
-          <input
-            type="number"
-            name="valorMin"
-            placeholder="Valor Min."
-            value={filtros.valorMin}
-            onChange={handleChangeFiltro}
-            className="p-2 rounded text-white w-full md:w-26"
-          />
-          <input
-            type="number"
-            name="valorMax"
-            placeholder="Valor Max."
-            value={filtros.valorMax}
-            onChange={handleChangeFiltro}
-            className="p-2 rounded text-white w-full md:w-26"
-          />
-          <input
-            type="number"
-            name="estoqueMin"
-            placeholder="Estoque Min."
-            value={filtros.estoqueMin}
-            onChange={handleChangeFiltro}
-            className="p-2 rounded text-white w-full md:w-32"
-          />
-          <input
-            type="number"
-            name="estoqueMax"
-            placeholder="Estoque Max."
-            value={filtros.estoqueMax}
-            onChange={handleChangeFiltro}
-            className="p-2 rounded text-white w-full md:w-32"
+            className="p-2 rounded border-1 text-white bg-cinza-escuro w-1/1 "
           />
           <button
-            onClick={limparFiltros}
-            className="bg-red-500 text-white p-2 ml-auto rounded hover:bg-vermelho-botao w-full md:w-auto hover:cursor-pointer"
+            className="bg-azul-stockit text-white p-2 rounded w-32 cursor-pointer"
+            onClick={() => setFiltrosVisiveis((v) => !v)}
           >
-            Limpar Filtros
+            {filtrosVisiveis ? 'Fechar Filtros' : 'Filtros'}
           </button>
         </div>
+        {/* Barra de Filtros (igual para ambos, mas só aparece se aberto) */}
+        {filtrosVisiveis && (
+          <div className="bg-cinza-escuro p-6 rounded mb-6 flex flex-col md:flex-row gap-4 ">
+            {/* Os filtros extras */}
+            <input
+              type="text"
+              name="id"
+              placeholder="ID"
+              value={filtros.id}
+              onChange={handleChangeFiltro}
+              className="p-2 rounded text-white w-full md:w-16"
+            />
+            <input
+              type="number"
+              name="valorMin"
+              placeholder="Valor Min."
+              value={filtros.valorMin}
+              onChange={handleChangeFiltro}
+              className="p-2 rounded text-white w-full md:w-26"
+            />
+            <input
+              type="number"
+              name="valorMax"
+              placeholder="Valor Max."
+              value={filtros.valorMax}
+              onChange={handleChangeFiltro}
+              className="p-2 rounded text-white w-full md:w-26"
+            />
+            <input
+              type="number"
+              name="estoqueMin"
+              placeholder="Estoque Min."
+              value={filtros.estoqueMin}
+              onChange={handleChangeFiltro}
+              className="p-2 rounded text-white w-full md:w-32"
+            />
+            <input
+              type="number"
+              name="estoqueMax"
+              placeholder="Estoque Max."
+              value={filtros.estoqueMax}
+              onChange={handleChangeFiltro}
+              className="p-2 rounded text-white w-full md:w-32"
+            />
+            <button
+              onClick={limparFiltros}
+              className="bg-red-500 text-white p-2 ml-auto rounded hover:bg-vermelho-botao w-full md:w-auto hover:cursor-pointer"
+            >
+              Limpar Filtros
+            </button>
+          </div>
+        )}
 
-        <div className="hidden md:grid grid-cols-7 text-white bg-gray-800 p-4 font-semibold rounded-t-2xl mt-[8vh]">
+        <div className="hidden md:grid md:grid-cols-7 md:grid-rows-none grid-rows-3 text-white bg-gray-800 p-4 font-semibold rounded-t-2xl mt-[8vh] flex">
           <span>Imagem</span>
           <span>ID</span>
           <span>Nome</span>
@@ -158,7 +192,8 @@ function ListaProdutos() {
         </div>
 
         {produtosFiltrados.length === 0 && (
-          <p className="text-cinza-escuro text-center md:bg-white rounded-t-2xl pt-8 bg-none ">
+
+          <p className="text-cinza-escuro text-center md:p-1 p-6 bg-white md:pt-8 md:rounded-t-2xl rounded-t-2xl mt-[15vh]">
             Nenhum produto encontrado.
           </p>
         )}
@@ -166,10 +201,10 @@ function ListaProdutos() {
   {produtosFiltrados.map((produto) => (
     <div
       key={produto.id}
-      className="grid md:grid-cols-7 grid-cols-1 gap-4 bg-cinza-escuro p-4 text-white"
+      className="grid md:grid-cols-7 grid-cols-1 gap-4 bg-cinza-escuro md:rounded-none rounded-xl p-4 text-white"
     >
-
-      <div className="flex justify-center md:justify-start items-center">
+      {/* Desktop */}
+      <div className="hidden md:flex justify-center md:justify-start items-center">
         {produto.imagem ? (
           <img
             src={produto.imagem}
@@ -182,9 +217,16 @@ function ListaProdutos() {
           </div>
         )}
       </div>
-
       {/* Campos desktop */}
-      <div className="hidden md:flex items-center">{produto.id}</div>
+      <div className="hidden md:flex items-center">
+        <span
+          className="bg-gray-500/70 text-white px-4 py-1  font-bold rounded-full cursor-pointer hover:bg-gray-400 transition"
+          title="Clique para copiar o ID"
+          onClick={() => navigator.clipboard.writeText(produto.id)}
+        >
+          {produto.id}
+        </span>
+      </div>
       <div className="hidden md:flex items-center">{produto.nome}</div>
       <div className="hidden md:flex items-center">{produto.marca}</div>
       <div className="hidden md:flex items-center">{produto.categoria}</div>
@@ -194,13 +236,45 @@ function ListaProdutos() {
       <div className="hidden md:flex items-center">{produto.estoque}</div>
 
       {/* Mobile */}
-      <div className="md:hidden flex flex-col gap-1 text-sm">
-        <p><span className="font-bold">ID:</span> {produto.id}</p>
-        <p><span className="font-bold">Nome:</span> {produto.nome}</p>
-        <p><span className="font-bold">Marca:</span> {produto.marca}</p>
-        <p><span className="font-bold">Categoria:</span> {produto.categoria}</p>
-        <p><span className="font-bold">Valor:</span> R$ {Number(produto.valor).toFixed(2)}</p>
-        <p><span className="font-bold">Estoque:</span> {produto.estoque}</p>
+      <div className="md:hidden flex items-center gap-4">
+        {/* Imagem */}
+        <div className="flex-shrink-0">
+          {produto.imagem ? (
+            <img
+              src={produto.imagem}
+              alt={produto.nome}
+              className="w-16 h-16 object-cover rounded bg-white"
+            />
+          ) : (
+            <div className="w-16 h-16 bg-gray-700 flex items-center justify-center rounded">
+              <span className="text-xs text-center text-white-700">Sem imagem</span>
+            </div>
+          )}
+        </div>
+        {/* Info principal */}
+        <div className="flex flex-col flex-1">
+          <span className="font-semibold text-base">{produto.nome}</span>
+          <span className="text-sm text-gray-200">{produto.marca}</span>
+        </div>
+        {/* Valor */}
+        <div className="font-bold text-xl ml-auto whitespace-nowrap">
+          R$ {Number(produto.valor).toFixed(2).replace('.', ',')}
+        </div>
+      </div>
+      {/* Mobile - tags */}
+      <div className="md:hidden flex gap-1 justify-between items-center">
+        <div className='flex gap-1 text-center justify-center items-center  ' >
+        <span
+          className="bg-gray-500/70 text-white text-xs px-3 py-1 rounded-full font-semibold cursor-pointer hover:bg-gray-400 transition"
+          title="Clique para copiar o ID"
+          onClick={() => navigator.clipboard.writeText(produto.id)}
+        >
+          #{produto.id}
+        </span>
+          <span className="bg-gray-500/70 text-white inline-block text-xs px-3 py-1 rounded-full font-semibold">{produto.categoria}</span>
+        </div>
+        <div className='flex items-center'>
+          <span className=" text-white text-x px-3 py-1 rounded-full font-semibold">{produto.estoque} Uni.</span></div>
       </div>
     </div>
   ))}

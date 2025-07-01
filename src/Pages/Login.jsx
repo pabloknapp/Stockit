@@ -13,6 +13,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
+    
     try {
       const response = await fetch(
         `http://localhost:3000/users?email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`
@@ -25,6 +26,8 @@ function Login() {
         localStorage.setItem('user', JSON.stringify(user));
         console.log('Login realizado:', user);
         navigate('/home');
+
+
       } else {
         setErro('Usuário ou senha inválidos.');
       }
@@ -96,6 +99,7 @@ function Login() {
             className="w-full p-3 mt-10 bg-azul-botao cursor-pointer rounded-lg font-bold text-white hover:bg-blue-500 transition-all duration-200"
             type="submit"
             value="Entrar"
+            
           />
 
           {erro && (

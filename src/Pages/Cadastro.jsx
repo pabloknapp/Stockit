@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import '../Styles/Variables.css';
 import Logo from '../Assets/logo-stockit.png';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
+
 
 function Cadastro() {
   const [form, setForm] = useState({
@@ -9,6 +12,8 @@ function Cadastro() {
     senha: '',
     confirmarSenha: ''
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,6 +28,17 @@ function Cadastro() {
 
     if (form.senha !== form.confirmarSenha) {
       alert("As senhas não coincidem!");
+      return;
+    }
+
+    // Verifica se já existe usuário com o mesmo e-mail
+    const verificaEmail = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(form.email)}`);
+    const usuarios = await verificaEmail.json();
+    if (usuarios.length > 0) {
+      Toast.fire({
+        icon: "error",
+        title: "E-mail já cadastrado!"
+      });
       return;
     }
 
@@ -42,14 +58,15 @@ function Cadastro() {
     });
 
     if (response.ok) {
-      alert("Usuário cadastrado com sucesso!");
+      
       setForm({
         nome: '',
         email: '',
         senha: '',
         confirmarSenha: ''
       });
-      window.location.href = "/login";
+      navigate("/login");
+      alert("Usuário cadastrado com sucesso!");
     } else {
       alert("Erro ao cadastrar usuário.");
     }

@@ -5,7 +5,7 @@
 
 # Stockit - Projeto Integrador.
 
-- [ libraries instaladas: react-hook-form, react-router-dom e Tailwindcss]
+- [ BIBLIOTECAS INSTALADAS: react-hook-form, react-router-dom, sweetalert2, json-server, jspdf e Tailwindcss]
 
 ## Como rodar o projeto
 
@@ -19,7 +19,7 @@ Iniciar o projeto
 npm run dev
 ```
 
-Iniciar API fake
+Iniciar API fake (Em outro terminal)
 ```bash
 cd .\Stockit-API\
 

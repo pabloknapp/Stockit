@@ -5,7 +5,7 @@
 
 # Stockit - Projeto Integrador.
 
-- [ BIBLIOTECAS INSTALADAS: react-hook-form, react-router-dom, sweetalert2, json-server, jspdf e Tailwindcss]
+- [ **BIBLIOTECAS INSTALADAS**: react-hook-form, react-router-dom, sweetalert2, json-server, jspdf e Tailwindcss]
 
 ## Como rodar o projeto
 

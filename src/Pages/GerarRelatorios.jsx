@@ -49,7 +49,7 @@ export default function GerarRelatorio() {
   return (
     <div>
       <Menu />
-      <div className="min-h-screen flex flex-col sm:flex-row bg-gray-100">
+      <div className="min-h-screen flex flex-col sm:flex-row bg-gray-100 md:ml-[20vw]">
         <main className="flex-1 flex flex-col items-center justify-center px-4 py-6">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6">Gerar relatório</h1>
           <div className="bg-white w-full max-w-md sm:max-w-xl rounded-lg shadow-md p-6 sm:p-10 flex flex-col items-center">

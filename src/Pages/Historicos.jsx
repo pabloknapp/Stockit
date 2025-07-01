@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Menu from "../Components/Menu";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 function Historico() {
   const [eventos, setEventos] = useState([]);

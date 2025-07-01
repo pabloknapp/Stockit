@@ -130,6 +130,120 @@
       "userId": "1",
       "titulo": "Produto deletado",
       "descricao": "admin deletou o produto bateria às 02:24:51 30/06/2025"
+    },
+    {
+      "id": "b146",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Samsung j1 às 21:51:24 30/06/2025"
+    },
+    {
+      "id": "aa9d",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Samsung j1 às 21:54:03 30/06/2025"
+    },
+    {
+      "id": "8a3c",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Galaxy às 23:54:44 30/06/2025"
+    },
+    {
+      "id": "bacb",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Cristiano Ronaldo Da silva Neymar às 01:11:20 01/07/2025"
+    },
+    {
+      "id": "ade8",
+      "userId": "1",
+      "titulo": "Produto editado",
+      "descricao": "admin alterou categoria do produto undefined às 01:23:46 01/07/2025"
+    },
+    {
+      "id": "9bef",
+      "userId": "1",
+      "titulo": "Produto editado",
+      "descricao": "admin alterou categoria do produto Cristiano Ronaldo Da silva Neymar às 01:24:26 01/07/2025"
+    },
+    {
+      "id": "7f0a",
+      "userId": "1",
+      "titulo": "Produto editado",
+      "descricao": "admin alterou valor do produto Cristiano Ronaldo Da silva Neymar às 01:25:10 01/07/2025"
+    },
+    {
+      "id": "1e4b",
+      "userId": "1",
+      "titulo": "Produto editado",
+      "descricao": "admin alterou estoque, valor do produto Cristiano Ronaldo Da silva Neymar às 01:25:47 01/07/2025"
+    },
+    {
+      "id": "5240",
+      "userId": "1",
+      "titulo": "Produto editado",
+      "descricao": "admin alterou estoque do produto Cristiano Ronaldo Da silva Neymar às 01:26:41 01/07/2025"
+    },
+    {
+      "id": "130d",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Cristiano Ronaldo Da silva Neymar às 01:49:47 01/07/2025"
+    },
+    {
+      "id": "b099",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Celular às 01:50:37 01/07/2025"
+    },
+    {
+      "id": "1b43",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Motorola x9 às 01:51:01 01/07/2025"
+    },
+    {
+      "id": "e02b",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Luis às 01:53:30 01/07/2025"
+    },
+    {
+      "id": "887b",
+      "userId": "1",
+      "titulo": "Novo Produto adicionado",
+      "descricao": "admin criou o produto Pablo às 01:54:33 01/07/2025"
+    },
+    {
+      "id": "830e",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Galaxy às 01:55:26 01/07/2025"
+    },
+    {
+      "id": "c3f0",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Celular às 01:55:31 01/07/2025"
+    },
+    {
+      "id": "c0da",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Motorola x9 às 01:55:38 01/07/2025"
+    },
+    {
+      "id": "bea3",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Luis às 01:55:43 01/07/2025"
+    },
+    {
+      "id": "abff",
+      "userId": "1",
+      "titulo": "Produto deletado",
+      "descricao": "admin deletou o produto Pablo às 01:55:50 01/07/2025"
     }
   ]
 }

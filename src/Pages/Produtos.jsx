@@ -192,6 +192,7 @@ function ListaProdutos() {
         </div>
 
         {produtosFiltrados.length === 0 && (
+
           <p className="text-cinza-escuro text-center md:p-1 p-6 bg-white md:pt-8 md:rounded-t-2xl rounded-t-2xl mt-[15vh]">
             Nenhum produto encontrado.
           </p>

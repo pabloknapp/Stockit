@@ -42,71 +42,69 @@
       "valor": "50",
       "imagem": "data:image/jpeg;base64,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",
       "userId": "1751251619713"
+    },
+    {
+      "id": "3458",
+      "nome": "aa",
+      "marca": "aa",
+      "categoria": "aa",
+      "estoque": "1",
+      "valor": "1",
+      "imagem": "",
+      "userId": "1"
+    },
+    {
+      "id": "9766",
+      "nome": "1",
+      "marca": "1",
+      "categoria": "1",
+      "estoque": "1",
+      "valor": "1",
+      "imagem": "",
+      "userId": "1"
+    },
+    {
+      "id": "d520",
+      "nome": "eu",
+      "marca": "zap",
+      "categoria": "tamoiai",
+      "estoque": "100",
+      "valor": "150",
+      "imagem": "https://images.tcdn.com.br/img/img_prod/473588/telefone_com_fio_pleno_preto_sem_chave_intelbras_1167_1_20200818174042.jpg",
+      "userId": "1"
+    },
+    {
+      "id": "1781",
+      "nome": "Zzz",
+      "marca": "zz",
+      "categoria": "zzz",
+      "estoque": "13",
+      "valor": "10000",
+      "imagem": "",
+      "userId": "1"
+    },
+    {
+      "id": "7981",
+      "nome": "ttt",
+      "marca": "tt",
+      "categoria": "tt",
+      "estoque": "0",
+      "valor": "10",
+      "imagem": "",
+      "userId": "1"
+    },
+    {
+      "id": "f4cf",
+      "nome": "tetete",
+      "marca": "asus",
+      "categoria": "telefono",
+      "estoque": "10",
+      "valor": "500000",
+      "imagem": "",
+      "userId": "1"
     }
   ],
   "historico": [
-    {
-      "id": "d2ab",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto test às 06:42:31 29/06/2025"
-    },
-    {
-      "id": "8003",
-      "userId": "1",
-      "titulo": "Produto editado",
-      "descricao": "admin alterou nome, categoria, estoque do produto test às 06:42:57 29/06/2025"
-    },
-    {
-      "id": "d8dd",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto aaa às 06:43:04 29/06/2025"
-    },
-    {
-      "id": "895a",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto 111 às 07:15:34 29/06/2025"
-    },
-    {
-      "id": "363f",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto a às 07:16:41 29/06/2025"
-    },
-    {
-      "id": "7306",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "undefined criou o produto bateria às 22:58:46 29/06/2025"
-    },
-    {
-      "id": "93b1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "undefined criou o produto samsung às 23:00:38 29/06/2025"
-    },
-    {
-      "id": "c786",
-      "titulo": "Produto deletado",
-      "descricao": "undefined deletou o produto samsung às 23:18:05 29/06/2025"
-    },
-    {
-      "id": "bae5",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "undefined criou o produto bateria às 23:22:03 29/06/2025"
-    },
-    {
-      "id": "3ad4",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto a às 23:24:09 29/06/2025"
-    },
-    {
-      "id": "565d",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto 111 às 23:28:16 29/06/2025"
-    },
     {
       "id": "71f8",
       "userId": "1751251619713",
@@ -118,132 +116,6 @@
       "userId": "1751251619713",
       "titulo": "Novo Produto adicionado",
       "descricao": "luis criou o produto conector A33 às 02:21:57 30/06/2025"
-    },
-    {
-      "id": "55b8",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto bateria às 02:24:25 30/06/2025"
-    },
-    {
-      "id": "c47c",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto bateria às 02:24:51 30/06/2025"
-    },
-    {
-      "id": "b146",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Samsung j1 às 21:51:24 30/06/2025"
-    },
-    {
-      "id": "aa9d",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Samsung j1 às 21:54:03 30/06/2025"
-    },
-    {
-      "id": "8a3c",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Galaxy às 23:54:44 30/06/2025"
-    },
-    {
-      "id": "bacb",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Cristiano Ronaldo Da silva Neymar às 01:11:20 01/07/2025"
-    },
-    {
-      "id": "ade8",
-      "userId": "1",
-      "titulo": "Produto editado",
-      "descricao": "admin alterou categoria do produto undefined às 01:23:46 01/07/2025"
-    },
-    {
-      "id": "9bef",
-      "userId": "1",
-      "titulo": "Produto editado",
-      "descricao": "admin alterou categoria do produto Cristiano Ronaldo Da silva Neymar às 01:24:26 01/07/2025"
-    },
-    {
-      "id": "7f0a",
-      "userId": "1",
-      "titulo": "Produto editado",
-      "descricao": "admin alterou valor do produto Cristiano Ronaldo Da silva Neymar às 01:25:10 01/07/2025"
-    },
-    {
-      "id": "1e4b",
-      "userId": "1",
-      "titulo": "Produto editado",
-      "descricao": "admin alterou estoque, valor do produto Cristiano Ronaldo Da silva Neymar às 01:25:47 01/07/2025"
-    },
-    {
-      "id": "5240",
-      "userId": "1",
-      "titulo": "Produto editado",
-      "descricao": "admin alterou estoque do produto Cristiano Ronaldo Da silva Neymar às 01:26:41 01/07/2025"
-    },
-    {
-      "id": "130d",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Cristiano Ronaldo Da silva Neymar às 01:49:47 01/07/2025"
-    },
-    {
-      "id": "b099",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Celular às 01:50:37 01/07/2025"
-    },
-    {
-      "id": "1b43",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Motorola x9 às 01:51:01 01/07/2025"
-    },
-    {
-      "id": "e02b",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Luis às 01:53:30 01/07/2025"
-    },
-    {
-      "id": "887b",
-      "userId": "1",
-      "titulo": "Novo Produto adicionado",
-      "descricao": "admin criou o produto Pablo às 01:54:33 01/07/2025"
-    },
-    {
-      "id": "830e",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Galaxy às 01:55:26 01/07/2025"
-    },
-    {
-      "id": "c3f0",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Celular às 01:55:31 01/07/2025"
-    },
-    {
-      "id": "c0da",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Motorola x9 às 01:55:38 01/07/2025"
-    },
-    {
-      "id": "bea3",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Luis às 01:55:43 01/07/2025"
-    },
-    {
-      "id": "abff",
-      "userId": "1",
-      "titulo": "Produto deletado",
-      "descricao": "admin deletou o produto Pablo às 01:55:50 01/07/2025"
     }
   ]
 }

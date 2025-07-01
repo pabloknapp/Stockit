@@ -7,6 +7,25 @@
 
 - [ libraries instaladas: react-hook-form, react-router-dom e Tailwindcss]
 
+## Como rodar o projeto
+
+Instalar dependências
+```bash
+npm i
+```
+
+Iniciar o projeto
+```bash
+npm run dev
+```
+
+Iniciar API fake
+```bash
+cd .\Stockit-API\
+
+npx json-server db.json
+```
+
 ---
 
 ## 🧠 Git – Guia rápido

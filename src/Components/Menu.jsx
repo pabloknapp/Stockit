@@ -18,6 +18,8 @@ function Menu() {
   const navigate = useNavigate()
   const location = useLocation()
 
+  const usuario = JSON.parse(localStorage.getItem("user"));
+
   const abrirMenu = () => setMenuAberto(true)
   const fecharMenu = () => setMenuAberto(false)
 
@@ -39,7 +41,10 @@ function Menu() {
       {/* NAV DESKTOP */}
       <nav className="hidden md:flex justify-between items-center bg-cinza-escuro p-4">
         <div />
-        <img src={IconsPerfil} alt="Perfil" className="" />
+        <div className='flex gap-12'>
+          <p className='text-white'>Bem-vindo ao Stockit, <span className='font-bold'>{usuario.nome}</span></p>
+          <img src={IconsPerfil} alt="Perfil" className="" />
+        </div>
       </nav>
 
       {/* ASIDE DESKTOP */}
@@ -55,8 +60,8 @@ function Menu() {
                   to={item.to}
                   className={`flex items-center gap-8 rounded p-2 transition-all duration-200
                     ${location.pathname === item.to
-                      ? 'bg-azul-stockit text-white'
-                      : 'hover:bg-gray-700 hover:text-blue-300'}
+                      ? 'bg-azul-stockit text-white scale-105'
+                      : 'hover:bg-slate-700 hover:text-blue-300 hover:scale-103 transition '}
                   `}
                 >
                   <img src={item.icon} alt="" className="w-5" />

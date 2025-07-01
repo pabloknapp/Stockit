@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "../Components/Menu";
 import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
 
 function Historico() {
   const [eventos, setEventos] = useState([]);
@@ -68,13 +67,13 @@ function Historico() {
       <Menu />
       <div className="min-h-screen flex flex-col sm:flex-row bg-cinza">
         <main className="flex-1 px-4 py-6 flex flex-col items-center">
-          <h1 className="text-2xl sm:text-4xl font-bold md:ml-[10vw] my-10">
+          <h1 className="text-2xl text-cinza-escuro sm:text-4xl font-bold md:ml-[10vw] my-10">
             Histórico de atividade
           </h1>
 
           {eventos.length === 0 ? (
             <p className="text-gray-600 mt-32 md:pl-[15vh]">
-              Nenhum evento registrado.
+              Nenhuma atividade registrada.
             </p>
           ) : (
             <div className="bg-white w-full md:ml-[10vw] flex flex-col-reverse gap-4 max-w-3xl rounded-lg shadow-md p-6">

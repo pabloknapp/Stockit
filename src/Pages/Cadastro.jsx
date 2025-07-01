@@ -4,7 +4,6 @@ import Logo from '../Assets/logo-stockit.png';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
-
 function Cadastro() {
   const [form, setForm] = useState({
     nome: '',
@@ -22,12 +21,27 @@ function Cadastro() {
       [name]: value
     });
   };
+  
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (form.senha !== form.confirmarSenha) {
-      alert("As senhas não coincidem!");
+    Toast.fire({
+      icon: "error",
+      title: "As senhas não coincidem!"
+    });
       return;
     }
 

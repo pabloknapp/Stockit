@@ -17,10 +17,6 @@ function Home() {
         .then((dados) => {
           setProdutos(dados);
           setLoading(false);
-
-          if (dados.length === 0) {
-            navigate("/produtos");
-          }
         })
         .catch((err) => {
           console.error(err);
@@ -43,7 +39,7 @@ function Home() {
     <>
       <Menu />
       <main className="px-4 md:h-screen md:px-0 md:pl-[25vw] md:pr-[15vw] flex flex-col gap-7 bg-cinza">
-        <h1 className="text-3xl mb-4 font-bold md:text-[45px] md:mt-[8vh] text-cinza-escuro">
+        <h1 className="text-3xl mb-4 font-bold md:text-[45px] mt-[8vh] text-cinza-escuro">
           Visão geral
         </h1>
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Menu from '../Components/Menu';
 import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
 
 // Defina o Toast fora do componente
 const Toast = Swal.mixin({
@@ -116,7 +115,7 @@ function ListaProdutos() {
     <>
       <Menu />
       <div className="bg-cinza min-h-screen md:ml-[16rem] p-4 md:p-8">
-        <h1 className="text-3xl text-center md:text-left font-bold mb-16 mt-2 text-cinza-escuro">
+        <h1 className="text-4xl text-center md:text-left font-bold mb-16 mt-6 text-cinza-escuro">
           Meus Produtos
         </h1>
 
@@ -220,7 +219,7 @@ function ListaProdutos() {
 
         {produtosFiltrados.length === 0 && (
 
-          <p className="text-cinza-escuro text-center md:p-1 p-6 bg-white md:pt-8 md:rounded-t-2xl rounded-t-2xl mt-[15vh]">
+          <p className="text-cinza-escuro text-center md:p-1 p-6 md:pt-8 md:rounded-t-2xl rounded-t-2xl mb-5">
             Nenhum produto encontrado.
           </p>
         )}

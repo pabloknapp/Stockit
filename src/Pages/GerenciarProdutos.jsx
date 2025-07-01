@@ -7,8 +7,6 @@ import IconsMais from '../Assets/Icons/icon-mais2.png';
 import IconsMenos from '../Assets/Icons/icons-menos.png';
 import IconsCaneta from '../Assets/Icons/icon-caneta.png';
 import { useState } from 'react';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
 
 function GerenciarProdutos() {
   const [mostrarFormCriar, setMostrarFormCriar] = useState(false);
@@ -214,7 +212,7 @@ function GerenciarProdutos() {
       <Menu />
       <div className="flex h-full">
         <main className="bg-cinza min-h-screen w-full md:pl-[15vw] p-6 md:p-12">
-          <h1 className="text-3xl mt-2 my-24 md:text-left font-bold block">Gerenciar Produtos</h1>
+          <h1 className="text-cinza-escuro text-4xl mt-2 my-24 md:text-left font-bold block">Gerenciar Produtos</h1>
           <ul className="flex flex-col gap-8">
             {/* Adicionar Produto */}
             <li className="flex items-center justify-between md:justify-between">

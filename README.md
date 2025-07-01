@@ -3,7 +3,8 @@
 <img src="https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" />
 </div>
 
-# Stockit - Projeto Integrador.
+# Stockit - Projeto Integrador - Sistema de gestão de estoque.
+
 
 - [ **BIBLIOTECAS INSTALADAS**: react-hook-form, react-router-dom, sweetalert2, json-server, jspdf e Tailwindcss]
 

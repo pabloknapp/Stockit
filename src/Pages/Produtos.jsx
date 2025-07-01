@@ -3,6 +3,19 @@ import Menu from '../Components/Menu';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+// Defina o Toast fora do componente
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
+
 function ListaProdutos() {
   const [produtos, setProdutos] = useState([]);
   const [produtosFiltrados, setProdutosFiltrados] = useState([]);
@@ -82,6 +95,20 @@ function ListaProdutos() {
       valorMax: '',
       estoqueMin: '',
       estoqueMax: '',
+    });
+
+    Toast.fire({
+      icon: "success",
+      title: "Filtros Limpados com Sucesso!"
+    });
+  };
+
+  // Função para copiar e mostrar o toast
+  const copiarId = (id) => {
+    navigator.clipboard.writeText(id);
+    Toast.fire({
+      icon: "success",
+      title: "ID copiado!"
     });
   };
 
@@ -221,7 +248,7 @@ function ListaProdutos() {
         <span
           className="bg-gray-500/70 text-white px-4 py-1  font-bold rounded-full cursor-pointer hover:bg-gray-400 transition"
           title="Clique para copiar o ID"
-          onClick={() => navigator.clipboard.writeText(produto.id)}
+          onClick={() => copiarId(produto.id)}
         >
           {produto.id}
         </span>

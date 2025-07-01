@@ -2,6 +2,21 @@ import '../Styles/Variables.css';
 import Logo from '../Assets/logo-stockit.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
+
+
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
 
 function Login() {
   const navigate = useNavigate();
@@ -25,9 +40,14 @@ function Login() {
         const user = data[0];
         localStorage.setItem('user', JSON.stringify(user));
         console.log('Login realizado:', user);
+
+        Toast.fire({
+          icon: "success",
+          title: "Login realizado com sucesso!",
+          timer: 2000
+        });
+
         navigate('/home');
-
-
       } else {
         setErro('Usuário ou senha inválidos.');
       }
@@ -36,6 +56,10 @@ function Login() {
       setErro('Erro ao tentar fazer login.');
     }
   };
+
+
+
+
 
   return (
     <>

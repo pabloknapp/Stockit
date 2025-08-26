@@ -148,3 +148,8 @@ git reset --hard
 ---
 
 🛠️ *Mantenha essa colinha por perto enquanto trabalha com Git. Ela pode salvar seu dia!*
+
+
+# Contribuidores
+
+<a href="https://github.com/wagnerloch"><img src="https://github.com/wagnerloch.png" width="45" height="45"></a> &nbsp;
